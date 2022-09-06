@@ -21,10 +21,13 @@ try {
 
     /*myEvents.execSQL("INSERT INTO users (name,age) VALUES ('Aziz',22)");
     myEvents.execSQL("INSERT INTO users (name,age) VALUES ('Akbarshox',18)");
-
+    myEvents.execSQL("INSERT INTO users (name,age) VALUES ('Lolo',35)");
     myEvents.execSQL("INSERT INTO users (name,age) VALUES ('Lolo',16)");
-*/
-    Cursor c = myEvents.rawQuery("SELECT * FROM users WHERE age<=18", null);
+     myEvents.execSQL("DELETE FROM users WHERE name='Lolo' AND age=35");
+    */
+
+
+    Cursor c = myEvents.rawQuery("SELECT * FROM users", null);
 
         int nameIndex = c.getColumnIndex("name");
         int ageIndex = c.getColumnIndex("age");
